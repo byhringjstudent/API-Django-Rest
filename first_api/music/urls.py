@@ -2,6 +2,8 @@ from django.urls import path, include
 from rest_framework import routers
 
 from .views import ArtistViewSet, AlbumViewSet, SongViewSet
+from . import views
+
 
 router = routers.DefaultRouter()
 router.register(r'artists', ArtistViewSet)
@@ -10,5 +12,5 @@ router.register(r'songs', SongViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    # path('', views.index, name='index'),
+    path('', views.index, name='index'),
 ]

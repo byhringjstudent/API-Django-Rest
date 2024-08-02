@@ -54,7 +54,6 @@ class AlbumViewSet(viewsets.ViewSet):
         album.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-
 class SongViewSet(viewsets.ModelViewSet):
     queryset = Song.objects.all()
     serializer_class = SongSerializer
